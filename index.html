@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alviradib Watch Together</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">💖 <b>ALVIRADIB</b> 💖</h1>
+    <p class="subtitle">Watch movies & YouTube together</p>
+
+    <div class="room-section">
+      <input id="roomInput" placeholder="Enter room code" />
+      <button onclick="createRoom()">Create</button>
+      <button onclick="joinRoom()">Join</button>
+    </div>
+
+    <div class="video-section">
+      <input id="videoLink" placeholder="Paste YouTube link..." />
+      <button onclick="loadVideo()">Load Video</button>
+    </div>
+
+    <div id="player"></div>
+
+    <div class="controls">
+      <button onclick="playVideo()">▶ Play</button>
+      <button onclick="pauseVideo()">⏸ Pause</button>
+    </div>
+
+    <div class="status">
+      <p id="roomStatus">Room: —</p>
+      <p id="syncStatus">Status: Not connected</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
